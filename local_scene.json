@@ -1,0 +1,13 @@
+{
+    "user":1,
+    "segVideo": {
+        "count":1, 
+        "cameraIds": ["cameraId1", "cameraId2"]
+    },
+    "sceneId":"",
+    "scenes": [ {
+    "sceneId": "3f50f36d-3299-44f9-ae87-4777766360df",
+    "targets": ["1", "2", "3", "4"],
+    "cameras": ["11", "22", "33", "44"]
+    }]
+}

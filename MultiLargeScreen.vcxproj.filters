@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+    <Filter Include="videostream">
+      <UniqueIdentifier>{2d496808-e77d-45c8-9391-b6dba9033ee4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{02bf7dac-a4ae-4ca7-ad0b-4db88f347ad3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="log4qt">
+      <UniqueIdentifier>{0fba0d87-ac0f-49ba-b173-ccdb4e2ca047}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="log4qt\helpers">
+      <UniqueIdentifier>{971da007-ff13-419e-a4fe-11d80f930cf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="log4qt\spi">
+      <UniqueIdentifier>{555aa347-b9e5-4caf-89bd-da53a46a9c5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="log4qt\varia">
+      <UniqueIdentifier>{8772b56a-3292-46e2-892a-9a9c2f9e629c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="basectl">
+      <UniqueIdentifier>{6888a1fc-4142-4c00-a2db-a28e991b21e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="uictl">
+      <UniqueIdentifier>{9bb868bc-ac3e-45b1-b250-d48da3fdabc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assistant">
+      <UniqueIdentifier>{9beadf58-7aa0-45c1-9441-53e1ca78b5a0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="MultiLargeScreen.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtUic Include="MultiLargeScreen.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="MultiLargeScreen.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClCompile Include="MultiLargeScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="videostream\GLYuvWidget.cpp">
+      <Filter>videostream</Filter>
+    </ClCompile>
+    <ClCompile Include="videostream\nv12render_gpu.cpp">
+      <Filter>videostream</Filter>
+    </ClCompile>
+    <ClCompile Include="videostream\nv12fborender.cpp">
+      <Filter>videostream</Filter>
+    </ClCompile>
+    <ClCompile Include="SvrResourceMng.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\PubUnit.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="Config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiLargeScreenWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetLogin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetChangeUser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetOfflineMap.cpp">
+      <Filter>uictl</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetLabel.cpp">
+      <Filter>uictl</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetIconLabel.cpp">
+      <Filter>uictl</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetDomeVideo.cpp">
+      <Filter>uictl</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetDetailInfo.cpp">
+      <Filter>uictl</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetControlPanel.cpp">
+      <Filter>uictl</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetCameraList.cpp">
+      <Filter>uictl</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetCam.cpp">
+      <Filter>uictl</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetRefList.cpp">
+      <Filter>uictl</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetSlider.cpp">
+      <Filter>uictl</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetTargetList.cpp">
+      <Filter>uictl</Filter>
+    </ClCompile>
+    <ClCompile Include="LabelAlarmIcon.cpp">
+      <Filter>uictl</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetAlarmInfo.cpp">
+      <Filter>uictl</Filter>
+    </ClCompile>
+    <ClCompile Include="LabelFontAdjust.cpp">
+      <Filter>basectl</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetSliderV.cpp">
+      <Filter>uictl</Filter>
+    </ClCompile>
+    <ClCompile Include="LabelHover.cpp">
+      <Filter>basectl</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetDrop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetForgotPwd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpClient.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpClientSvr.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="SvrInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\MD5.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetVideo.cpp">
+      <Filter>uictl</Filter>
+    </ClCompile>
+    <ClCompile Include="LabelClick.cpp">
+      <Filter>basectl</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsumerMsg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MqAlarmSvr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SvrWeather.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetVideoSegment.cpp">
+      <Filter>uictl</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetDetailInfoAlarm.cpp">
+      <Filter>uictl</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LabelRefIcon.cpp">
+      <Filter>uictl</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="videostream\nv12render_gpu.h">
+      <Filter>videostream</Filter>
+    </ClInclude>
+    <ClInclude Include="videostream\nv12fborender.h">
+      <Filter>videostream</Filter>
+    </ClInclude>
+    <ClInclude Include="util\PubDefs.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\PubUnit.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="SvrInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="util\MD5.hpp">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsumerMsg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MultiLargeScreen.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="WidgetCam.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="WidgetTargetList.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="WidgetDetailInfo.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="WidgetAlarmInfo.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="WidgetCameraList.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="WidgetRefList.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="WidgetControlPanel.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="LabelFontAdjust.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="WidgetLabel.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="WidgetIconLabel.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="WidgetDomeVideo.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="WidgetOfflineMap.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="MultiLargeScreenWidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="WidgetLogin.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="WidgetChangeUser.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="WidgetSlider.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="WidgetSliderV.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="WidgetDrop.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="WidgetForgotPwd.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="videostream\GLYuvWidget.h">
+      <Filter>videostream</Filter>
+    </QtMoc>
+    <QtMoc Include="SvrResourceMng.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Config.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MultiLargeScreenWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="WidgetLogin.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="WidgetChangeUser.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="WidgetCam.h">
+      <Filter>uictl</Filter>
+    </QtMoc>
+    <QtMoc Include="WidgetCameraList.h">
+      <Filter>uictl</Filter>
+    </QtMoc>
+    <QtMoc Include="WidgetControlPanel.h">
+      <Filter>uictl</Filter>
+    </QtMoc>
+    <QtMoc Include="WidgetDetailInfo.h">
+      <Filter>uictl</Filter>
+    </QtMoc>
+    <QtMoc Include="WidgetDomeVideo.h">
+      <Filter>uictl</Filter>
+    </QtMoc>
+    <QtMoc Include="WidgetIconLabel.h">
+      <Filter>uictl</Filter>
+    </QtMoc>
+    <QtMoc Include="WidgetLabel.h">
+      <Filter>uictl</Filter>
+    </QtMoc>
+    <QtMoc Include="WidgetOfflineMap.h">
+      <Filter>uictl</Filter>
+    </QtMoc>
+    <QtMoc Include="WidgetRefList.h">
+      <Filter>uictl</Filter>
+    </QtMoc>
+    <QtMoc Include="WidgetSlider.h">
+      <Filter>uictl</Filter>
+    </QtMoc>
+    <QtMoc Include="WidgetTargetList.h">
+      <Filter>uictl</Filter>
+    </QtMoc>
+    <QtMoc Include="LabelAlarmIcon.h">
+      <Filter>uictl</Filter>
+    </QtMoc>
+    <QtMoc Include="WidgetAlarmInfo.h">
+      <Filter>uictl</Filter>
+    </QtMoc>
+    <QtMoc Include="LabelFontAdjust.h">
+      <Filter>basectl</Filter>
+    </QtMoc>
+    <QtMoc Include="WidgetSliderV.h">
+      <Filter>uictl</Filter>
+    </QtMoc>
+    <QtMoc Include="LabelHover.h">
+      <Filter>basectl</Filter>
+    </QtMoc>
+    <QtMoc Include="WidgetDrop.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="WidgetForgotPwd.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="HttpClient.h">
+      <Filter>util</Filter>
+    </QtMoc>
+    <QtMoc Include="HttpClientSvr.h">
+      <Filter>util</Filter>
+    </QtMoc>
+    <QtMoc Include="WidgetVideo.h">
+      <Filter>uictl</Filter>
+    </QtMoc>
+    <QtMoc Include="LabelClick.h">
+      <Filter>basectl</Filter>
+    </QtMoc>
+    <QtMoc Include="MqAlarmSvr.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SvrWeather.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="WidgetVideoSegment.h">
+      <Filter>uictl</Filter>
+    </QtMoc>
+    <QtMoc Include="WidgetDetailInfoAlarm.h">
+      <Filter>uictl</Filter>
+    </QtMoc>
+    <QtMoc Include="Application.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="LabelRefIcon.h">
+      <Filter>uictl</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Log4Qt\include\log4qt\Appender">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\Appenderskeleton">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\AsyncAppender">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\BasicConfigurator">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\BinaryFileAppender">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\BinaryLayout">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\BinaryLogger">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\BinaryLoggingEvent">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\BinaryLogStream">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\BinaryToTextLayout">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\BinaryWriterAppender">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\ColorConsoleAppender">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\ConsoleAppender">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\DailyFileAppender">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\DailyRollingFileAppender">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\DatabaseAppender">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\DatabaseLayout">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\FileAppender">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\Hierarchy">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\Layout">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\Level">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\Log4Qt">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\Log4QtShared">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\Logger">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\LoggerRepository">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\LoggingEvent">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\LogManager">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\LogStream">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\MainthreadAppender">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\MDC">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\NDC">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\PatternLayout">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\PropertyConfigurator">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\RollingBinaryFileAppender">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\RollingFileAppender">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\SignalAppender">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\SimpleLayout">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\SimpleTimeLayout">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\SystemlogAppender">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\TelnetAppender">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\TTCCLayout">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\WDCAppender">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="Log4Qt\include\log4qt\WriterAppender">
+      <Filter>log4qt</Filter>
+    </None>
+    <None Include="html\map.html">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="largescreen.json">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

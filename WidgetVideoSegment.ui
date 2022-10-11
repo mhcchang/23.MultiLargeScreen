@@ -1,0 +1,23 @@
+<UI version="4.0" >
+ <class>WidgetVideoSegment</class>
+ <widget class="QWidget" name="WidgetVideoSegment" >
+  <property name="objectName" >
+   <string notr="true">WidgetVideoSegment</string>
+  </property>
+  <property name="geometry" >
+   <rect>
+	<x>0</x>
+	<y>0</y>
+	<width>400</width>
+	<height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>WidgetVideoSegment</string>
+  </property>
+ </widget>
+ <layoutDefault spacing="6" margin="11" />
+ <pixmapfunction></pixmapfunction>
+ <resources/>
+ <connections/>
+</UI>

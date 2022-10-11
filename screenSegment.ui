@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>940</width>
+    <height>712</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="widgetVideos" native="true">
+   <property name="geometry">
+    <rect>
+     <x>168</x>
+     <y>188</y>
+     <width>600</width>
+     <height>319</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-width:0</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout" rowstretch="557,21,557" columnstretch="346,16,346">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="1" column="1">
+     <spacer name="verticalSpacer_5">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Preferred</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>5</width>
+        <height>5</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="2" column="0">
+     <widget class="QWidget" name="widgetCam3" native="true">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QWidget" name="widgetCam1" native="true">
+      <property name="styleSheet">
+       <string notr="true">border-width:0</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QWidget" name="widgetCam2" native="true"/>
+    </item>
+    <item row="2" column="2">
+     <widget class="QWidget" name="widgetCam4" native="true"/>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

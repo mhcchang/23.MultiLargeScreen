@@ -1,0 +1,35 @@
+{
+  "title": "视频融合智能认知平台",
+  "serverIp": "192.168.8.105",
+  "uri": "VideoPlatform",
+  "serverPort": 8081,
+  "userName": "qwe123",
+  "password": "MTIzNDU=",
+  "localStatus": {
+  	"dynamicCenterMap": true,
+  	"centerMapPoint": "116.34658,40.005896",
+    "centerMapZoom": "19"
+  },
+
+  "consumerMq": {
+    "sceneId": "3f50f36d-3299-44f9-ae87-4777766360df",
+    "host1": "192.168.8.101",
+    "port": 5672,
+    "username": "user1",
+    "password": "user1",
+    "publisherConfirms": true,
+    "exchangename": "alarm.image",
+    "routingkey": [],
+    "missRoutingkey": [ "object.all.missed" ],
+    "queuename": "qtLargeScreen3",
+    "missqueuename": "qtLargeScreen"
+  },
+
+  "gpsmap": {
+    "mapfile": "lnglat_shuangqinglu.json"
+  },
+  "alarm": {
+    "maxShowCount": 8,
+    "maxLiveMillSecond": 10000
+  }
+}

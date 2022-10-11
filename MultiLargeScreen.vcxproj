@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseWithDebuginfo|x64">
+      <Configuration>ReleaseWithDebuginfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{520B8987-1378-4602-AA61-6D3C6BC46A13}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebuginfo|x64'">8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebuginfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>5.11.2_msvc2017_64</QtInstall>
+    <QtModules>core;opengl;network;gui;widgets;webchannel;concurrent;webengine;webenginewidgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebuginfo|x64'" Label="QtSettings">
+    <QtInstall>5.12.8_msvc2017_64</QtInstall>
+    <QtModules>core;opengl;gui;widgets;webchannel;concurrent;openglextensions;webengine;webenginewidgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>5.12.8_msvc2017_64</QtInstall>
+    <QtModules>core;opengl;gui;widgets;webchannel;openglextensions;webengine;webenginewidgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+    <QMakeExtraArgs>QMAKE_CFLAGS_RELEASE = $$QMAKE_CFLAGS_RELEASE_WITH_DEBUGINFO;QMAKE_CXXFLAGS_RELEASE = $$QMAKE_CXXFLAGS_RELEASE_WITH_DEBUGINFO;QMAKE_LFLAGS_RELEASE = $$QMAKE_LFLAGS_RELEASE_WITH_DEBUGINFO;$(QMakeExtraArgs)</QMakeExtraArgs>
+    <QMakeCodeLines>QMAKE_CFLAGS_RELEASE = $$QMAKE_CFLAGS_RELEASE_WITH_DEBUGINFO;QMAKE_CXXFLAGS_RELEASE = $$QMAKE_CXXFLAGS_RELEASE_WITH_DEBUGINFO;QMAKE_LFLAGS_RELEASE = $$QMAKE_LFLAGS_RELEASE_WITH_DEBUGINFO;$(QMakeCodeLines)</QMakeCodeLines>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebuginfo|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebuginfo|x64'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(Qt_INCLUDEPATH_);./;./util;./videostream;$(THRIDRD_PARTY_STREAM);$(CUDA_PATH)\include;./Log4Qt/include/Log4Qt;./Log4Qt/include;./Log4Qt/src/log4qt;./Log4Qt/src/;$(ProjectDir);./SimpleAmqpClient;$(BOOSTSRC);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LOG4QT_STATIC;DEBUG_TEST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(THRIDRD_PARTY_STREAM_LIB);$(CUDA_PATH)\lib\x64;./Log4Qt/bin;$(BOOSTLIB);./SimpleAmqpClient/libs/Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(Qt_LIBS_);streamsdkd.lib;opengl32.lib;glu32.lib;cuda.lib;cudart.lib;log4qtd.lib;SimpleAmqpClient.7.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebuginfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>./;./util;./videostream;$(THRIDRD_PARTY_STREAM);$(CUDA_PATH)\include;./Log4Qt/include/Log4Qt;./Log4Qt/include;./Log4Qt/src/log4qt;./Log4Qt/src/;$(ProjectDir);./SimpleAmqpClient;$(BOOSTSRC);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>LOG4QT_STATIC;DEBUG_TEST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(THRIDRD_PARTY_STREAM_LIB);$(CUDA_PATH)\lib\x64;./Log4Qt/bin;$(BOOSTLIB);./SimpleAmqpClient/libs/Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(Qt_LIBS_);streamsdkd.lib;opengl32.lib;glu32.lib;cuda.lib;cudart.lib;log4qtd.lib;SimpleAmqpClient.7.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>./videostream;./util;./;$(THRIDRD_PARTY_STREAM);$(CUDA_PATH)\include;./Log4Qt/include/Log4Qt;./Log4Qt/include;./Log4Qt/src/log4qt;./Log4Qt/src/;$(ProjectDir);./SimpleAmqpClient;$(BOOSTSRC);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>DEBUG_TEST;$(Qt_DEFINES_);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(THRIDRD_PARTY_STREAM_LIB);$(CUDA_PATH)\lib\x64;$(THRIDRD_PARTY_ROOT);./Log4Qt/bin;$(BOOSTLIB);./SimpleAmqpClient/libs/Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(Qt_LIBS_);streamsdk.lib;opengl32.lib;glu32.lib;cuda.lib;cudart.lib;log4qt.lib;SimpleAmqpClient.7.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <GenerateMapFile>true</GenerateMapFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebuginfo|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Config.cpp" />
+    <ClCompile Include="ConsumerMsg.cpp" />
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="HttpClient.cpp" />
+    <ClCompile Include="HttpClientSvr.cpp" />
+    <ClCompile Include="LabelAlarmIcon.cpp" />
+    <ClCompile Include="LabelFontAdjust.cpp" />
+    <ClCompile Include="LabelHover.cpp" />
+    <ClCompile Include="LabelRefIcon.cpp" />
+    <ClCompile Include="MqAlarmSvr.cpp" />
+    <ClCompile Include="MultiLargeScreenWidget.cpp" />
+    <ClCompile Include="LabelClick.cpp" />
+    <ClCompile Include="SvrInterface.cpp" />
+    <ClCompile Include="SvrResourceMng.cpp" />
+    <ClCompile Include="SvrWeather.cpp" />
+    <ClCompile Include="util\MD5.cpp" />
+    <ClCompile Include="util\PubUnit.cpp" />
+    <ClCompile Include="videostream\GLYuvWidget.cpp" />
+    <ClCompile Include="videostream\nv12fborender.cpp" />
+    <ClCompile Include="videostream\nv12render_gpu.cpp" />
+    <ClCompile Include="WidgetAlarmInfo.cpp" />
+    <ClCompile Include="WidgetCam.cpp" />
+    <ClCompile Include="WidgetCameraList.cpp" />
+    <ClCompile Include="WidgetChangeUser.cpp" />
+    <ClCompile Include="WidgetControlPanel.cpp" />
+    <ClCompile Include="WidgetDetailInfo.cpp" />
+    <ClCompile Include="WidgetDetailInfoAlarm.cpp" />
+    <ClCompile Include="WidgetDomeVideo.cpp" />
+    <ClCompile Include="WidgetDrop.cpp" />
+    <ClCompile Include="WidgetForgotPwd.cpp" />
+    <ClCompile Include="WidgetIconLabel.cpp" />
+    <ClCompile Include="WidgetLabel.cpp" />
+    <ClCompile Include="WidgetLogin.cpp" />
+    <ClCompile Include="WidgetOfflineMap.cpp" />
+    <ClCompile Include="WidgetRefList.cpp" />
+    <ClCompile Include="WidgetSlider.cpp" />
+    <ClCompile Include="WidgetSliderV.cpp" />
+    <ClCompile Include="WidgetTargetList.cpp" />
+    <ClCompile Include="WidgetVideo.cpp" />
+    <ClCompile Include="WidgetVideoSegment.cpp" />
+    <QtRcc Include="MultiLargeScreen.qrc" />
+    <QtUic Include="MultiLargeScreen.ui" />
+    <QtMoc Include="MultiLargeScreen.h" />
+    <ClCompile Include="MultiLargeScreen.cpp" />
+    <ClCompile Include="main.cpp" />
+    <QtUic Include="LabelFontAdjust.ui" />
+    <QtUic Include="MultiLargeScreenWidget.ui" />
+    <QtUic Include="WidgetAlarmInfo.ui" />
+    <QtUic Include="WidgetCam.ui" />
+    <QtUic Include="WidgetCameraList.ui" />
+    <QtUic Include="WidgetChangeUser.ui" />
+    <QtUic Include="WidgetControlPanel.ui" />
+    <QtUic Include="WidgetDetailInfo.ui" />
+    <QtUic Include="WidgetDomeVideo.ui" />
+    <QtUic Include="WidgetDrop.ui" />
+    <QtUic Include="WidgetForgotPwd.ui" />
+    <QtUic Include="WidgetIconLabel.ui" />
+    <QtUic Include="WidgetLabel.ui" />
+    <QtUic Include="WidgetLogin.ui" />
+    <QtUic Include="WidgetOfflineMap.ui" />
+    <QtUic Include="WidgetRefList.ui" />
+    <QtUic Include="WidgetSlider.ui" />
+    <QtUic Include="WidgetSliderV.ui" />
+    <QtUic Include="WidgetTargetList.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="WidgetDetailInfoAlarm.h" />
+    <QtMoc Include="WidgetVideoSegment.h" />
+    <QtMoc Include="WidgetVideo.h" />
+    <QtMoc Include="WidgetForgotPwd.h" />
+    <QtMoc Include="WidgetDrop.h" />
+    <QtMoc Include="WidgetSliderV.h" />
+    <QtMoc Include="WidgetSlider.h" />
+    <QtMoc Include="WidgetChangeUser.h" />
+    <QtMoc Include="WidgetLogin.h" />
+    <QtMoc Include="WidgetOfflineMap.h" />
+    <QtMoc Include="WidgetDomeVideo.h" />
+    <QtMoc Include="WidgetIconLabel.h" />
+    <QtMoc Include="WidgetLabel.h" />
+    <QtMoc Include="WidgetControlPanel.h" />
+    <QtMoc Include="LabelFontAdjust.h" />
+    <QtMoc Include="SvrResourceMng.h" />
+    <QtMoc Include="Config.h" />
+    <QtMoc Include="HttpClientSvr.h" />
+    <QtMoc Include="HttpClient.h" />
+    <QtMoc Include="MultiLargeScreenWidget.h" />
+    <QtMoc Include="LabelClick.h" />
+    <QtMoc Include="LabelAlarmIcon.h" />
+    <QtMoc Include="LabelHover.h" />
+    <ClInclude Include="ConsumerMsg.h" />
+    <QtMoc Include="MqAlarmSvr.h" />
+    <QtMoc Include="Application.h" />
+    <QtMoc Include="LabelRefIcon.h" />
+    <ClInclude Include="SvrInterface.h" />
+    <QtMoc Include="SvrWeather.h" />
+    <ClInclude Include="util\MD5.hpp" />
+    <ClInclude Include="util\PubDefs.h" />
+    <ClInclude Include="util\PubUnit.h" />
+    <ClInclude Include="videostream\nv12fborender.h" />
+    <ClInclude Include="videostream\nv12render_gpu.h" />
+    <QtMoc Include="videostream\GLYuvWidget.h" />
+    <QtMoc Include="WidgetRefList.h" />
+    <QtMoc Include="WidgetCameraList.h" />
+    <QtMoc Include="WidgetAlarmInfo.h" />
+    <QtMoc Include="WidgetDetailInfo.h" />
+    <QtMoc Include="WidgetTargetList.h" />
+    <QtMoc Include="WidgetCam.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MultiLargeScreen.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="html\map.html" />
+    <None Include="largescreen.json" />
+    <None Include="Log4Qt\include\log4qt\Appender" />
+    <None Include="Log4Qt\include\log4qt\Appenderskeleton" />
+    <None Include="Log4Qt\include\log4qt\AsyncAppender" />
+    <None Include="Log4Qt\include\log4qt\BasicConfigurator" />
+    <None Include="Log4Qt\include\log4qt\BinaryFileAppender" />
+    <None Include="Log4Qt\include\log4qt\BinaryLayout" />
+    <None Include="Log4Qt\include\log4qt\BinaryLogger" />
+    <None Include="Log4Qt\include\log4qt\BinaryLoggingEvent" />
+    <None Include="Log4Qt\include\log4qt\BinaryLogStream" />
+    <None Include="Log4Qt\include\log4qt\BinaryToTextLayout" />
+    <None Include="Log4Qt\include\log4qt\BinaryWriterAppender" />
+    <None Include="Log4Qt\include\log4qt\ColorConsoleAppender" />
+    <None Include="Log4Qt\include\log4qt\ConsoleAppender" />
+    <None Include="Log4Qt\include\log4qt\DailyFileAppender" />
+    <None Include="Log4Qt\include\log4qt\DailyRollingFileAppender" />
+    <None Include="Log4Qt\include\log4qt\DatabaseAppender" />
+    <None Include="Log4Qt\include\log4qt\DatabaseLayout" />
+    <None Include="Log4Qt\include\log4qt\FileAppender" />
+    <None Include="Log4Qt\include\log4qt\Hierarchy" />
+    <None Include="Log4Qt\include\log4qt\Layout" />
+    <None Include="Log4Qt\include\log4qt\Level" />
+    <None Include="Log4Qt\include\log4qt\Log4Qt" />
+    <None Include="Log4Qt\include\log4qt\Log4QtShared" />
+    <None Include="Log4Qt\include\log4qt\Logger" />
+    <None Include="Log4Qt\include\log4qt\LoggerRepository" />
+    <None Include="Log4Qt\include\log4qt\LoggingEvent" />
+    <None Include="Log4Qt\include\log4qt\LogManager" />
+    <None Include="Log4Qt\include\log4qt\LogStream" />
+    <None Include="Log4Qt\include\log4qt\MainthreadAppender" />
+    <None Include="Log4Qt\include\log4qt\MDC" />
+    <None Include="Log4Qt\include\log4qt\NDC" />
+    <None Include="Log4Qt\include\log4qt\PatternLayout" />
+    <None Include="Log4Qt\include\log4qt\PropertyConfigurator" />
+    <None Include="Log4Qt\include\log4qt\RollingBinaryFileAppender" />
+    <None Include="Log4Qt\include\log4qt\RollingFileAppender" />
+    <None Include="Log4Qt\include\log4qt\SignalAppender" />
+    <None Include="Log4Qt\include\log4qt\SimpleLayout" />
+    <None Include="Log4Qt\include\log4qt\SimpleTimeLayout" />
+    <None Include="Log4Qt\include\log4qt\SystemlogAppender" />
+    <None Include="Log4Qt\include\log4qt\TelnetAppender" />
+    <None Include="Log4Qt\include\log4qt\TTCCLayout" />
+    <None Include="Log4Qt\include\log4qt\WDCAppender" />
+    <None Include="Log4Qt\include\log4qt\WriterAppender" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
