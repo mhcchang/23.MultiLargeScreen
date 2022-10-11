@@ -1,0 +1,79 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1500
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "log4qt", "src\log4qt\log4qt.vcxproj", "{C73C74DB-4555-3824-9998-DF969AB5A48D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "log4qttest", "tests\log4qttest\log4qttest.vcxproj", "{9AA3B232-A7E9-3F77-8A35-BCCFCE822DED}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C73C74DB-4555-3824-9998-DF969AB5A48D} = {C73C74DB-4555-3824-9998-DF969AB5A48D}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "binaryloggertest", "tests\binaryloggertest\binaryloggertest.vcxproj", "{5CE77059-5AA3-3C54-AF7E-E80D827BEAE3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C73C74DB-4555-3824-9998-DF969AB5A48D} = {C73C74DB-4555-3824-9998-DF969AB5A48D}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dailyfileappendertest", "tests\dailyfileappendertest\dailyfileappendertest.vcxproj", "{94B8B8B8-B696-3946-9F6B-3A063D3FF95E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C73C74DB-4555-3824-9998-DF969AB5A48D} = {C73C74DB-4555-3824-9998-DF969AB5A48D}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tst_filewatchertest", "tests\filewatcher\tst_filewatchertest.vcxproj", "{CD6D3211-5236-3F44-A3DB-5C2E32FC9403}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C73C74DB-4555-3824-9998-DF969AB5A48D} = {C73C74DB-4555-3824-9998-DF969AB5A48D}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "basic", "examples\basic\basic.vcxproj", "{1E4FF593-131B-3453-9BAF-F7F882AC025B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C73C74DB-4555-3824-9998-DF969AB5A48D} = {C73C74DB-4555-3824-9998-DF969AB5A48D}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "propertyconfigurator", "examples\propertyconfigurator\propertyconfigurator.vcxproj", "{1831E3D1-9387-3890-A192-4CBA34F57730}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C73C74DB-4555-3824-9998-DF969AB5A48D} = {C73C74DB-4555-3824-9998-DF969AB5A48D}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C73C74DB-4555-3824-9998-DF969AB5A48D}.Debug|x64.ActiveCfg = Debug|x64
+		{C73C74DB-4555-3824-9998-DF969AB5A48D}.Debug|x64.Build.0 = Debug|x64
+		{C73C74DB-4555-3824-9998-DF969AB5A48D}.Release|x64.ActiveCfg = Release|x64
+		{C73C74DB-4555-3824-9998-DF969AB5A48D}.Release|x64.Build.0 = Release|x64
+		{9AA3B232-A7E9-3F77-8A35-BCCFCE822DED}.Debug|x64.ActiveCfg = Debug|x64
+		{9AA3B232-A7E9-3F77-8A35-BCCFCE822DED}.Debug|x64.Build.0 = Debug|x64
+		{9AA3B232-A7E9-3F77-8A35-BCCFCE822DED}.Release|x64.ActiveCfg = Release|x64
+		{9AA3B232-A7E9-3F77-8A35-BCCFCE822DED}.Release|x64.Build.0 = Release|x64
+		{5CE77059-5AA3-3C54-AF7E-E80D827BEAE3}.Debug|x64.ActiveCfg = Debug|x64
+		{5CE77059-5AA3-3C54-AF7E-E80D827BEAE3}.Debug|x64.Build.0 = Debug|x64
+		{5CE77059-5AA3-3C54-AF7E-E80D827BEAE3}.Release|x64.ActiveCfg = Release|x64
+		{5CE77059-5AA3-3C54-AF7E-E80D827BEAE3}.Release|x64.Build.0 = Release|x64
+		{94B8B8B8-B696-3946-9F6B-3A063D3FF95E}.Debug|x64.ActiveCfg = Debug|x64
+		{94B8B8B8-B696-3946-9F6B-3A063D3FF95E}.Debug|x64.Build.0 = Debug|x64
+		{94B8B8B8-B696-3946-9F6B-3A063D3FF95E}.Release|x64.ActiveCfg = Release|x64
+		{94B8B8B8-B696-3946-9F6B-3A063D3FF95E}.Release|x64.Build.0 = Release|x64
+		{CD6D3211-5236-3F44-A3DB-5C2E32FC9403}.Debug|x64.ActiveCfg = Debug|x64
+		{CD6D3211-5236-3F44-A3DB-5C2E32FC9403}.Debug|x64.Build.0 = Debug|x64
+		{CD6D3211-5236-3F44-A3DB-5C2E32FC9403}.Release|x64.ActiveCfg = Release|x64
+		{CD6D3211-5236-3F44-A3DB-5C2E32FC9403}.Release|x64.Build.0 = Release|x64
+		{1E4FF593-131B-3453-9BAF-F7F882AC025B}.Debug|x64.ActiveCfg = Debug|x64
+		{1E4FF593-131B-3453-9BAF-F7F882AC025B}.Debug|x64.Build.0 = Debug|x64
+		{1E4FF593-131B-3453-9BAF-F7F882AC025B}.Release|x64.ActiveCfg = Release|x64
+		{1E4FF593-131B-3453-9BAF-F7F882AC025B}.Release|x64.Build.0 = Release|x64
+		{1831E3D1-9387-3890-A192-4CBA34F57730}.Debug|x64.ActiveCfg = Debug|x64
+		{1831E3D1-9387-3890-A192-4CBA34F57730}.Debug|x64.Build.0 = Debug|x64
+		{1831E3D1-9387-3890-A192-4CBA34F57730}.Release|x64.ActiveCfg = Release|x64
+		{1831E3D1-9387-3890-A192-4CBA34F57730}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		Qt5Version = 5.12.8_msvc2015_64
+		SolutionGuid = {5EFB69C7-D2AE-4D53-961F-D3B3F5ED7A93}
+	EndGlobalSection
+EndGlobal

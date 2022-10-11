@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+	body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=pQobgLSIsBiCsxACVjDZ1ynEKiVm6pic"></script>
+	<title></title>
+</head>
+<body>
+	<div id="allmap"></div>
+</body>
+</html>
+
+<script type="text/javascript">
+
+    var map = new BMap.Map("allmap", { mapType: BMAP_NORMAL_MAP });
+	map.centerAndZoom(new BMap.Point(116.350299, 39.970889), 15);
+	map.setCurrentCity("北京");
+	map.enableScrollWheelZoom(true);
+	map.enableContinuousZoom();
+	   
+	map.addControl(new BMap.MapTypeControl({
+	mapTypes:[
+          BMAP_NORMAL_MAP,
+          BMAP_HYBRID_MAP
+      ]}));	 
+       
+	var m_radius = 1000;
+    var m_point;
+  
+	map.addControl(new BMap.NavigationControl());
+
+	function SetRadius(radius) {
+        m_radius = radius;
+    }
+    function AutoSetCircle() {
+        var circle2 = new BMap.Circle(m_point, m_radius);
+        map.clearOverlays();
+        map.addOverlay(circle2);
+    }	   
+    
+    
+    function ReturnLngLat() {
+        var LngLat = new Array();
+        LngLat[0] = m_point.lng;
+        LngLat[1] = m_point.lat;
+        return LngLat;
+    }  
+    
+    function theLocation_obstacle(longitude, latitude) {
+        if (longitude != "" && latitude != "" ) {
+            // showinfo();
+            bm.clearOverlays();
+            bm.removeOverlay(marker);
+
+            var new_point = new BMap.Point(longitude, latitude);
+            marker.setPosition(new_point);
+            var newlabel = new Label(longitude + " " + latitude)
+
+            marker.setLabel(newlabel);
+            //map.centerAndZoom(new_point, 19);
+        }
+    }
+
+    var options = {      
+        onSearchComplete: function(results){     
+            console.log(results); 
+            if (local.getStatus() == BMAP_STATUS_SUCCESS){      
+                // 判断状态是否正确      
+                var s = [];      
+                for (var i = 0; i < results.getCurrentNumPois(); i ++){      
+                    s.push(results.getPoi(i).title + ", " + results.getPoi(i).address);      
+                }      
+                //document.getElementById("log").innerHTML = s.join("<br>");
+                
+                
+            } 
+        }      
+    };      
+ 
+    var local = new BMap.LocalSearch(map, {      
+        renderOptions:{map: map}      
+    });      
+    //local.search("天安门");
+
+</script>

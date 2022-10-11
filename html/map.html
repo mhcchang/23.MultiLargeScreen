@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="git" content="https://github.com/muxfe/bmap-offline-for-web" />
+    <meta name="author" content="https://github.com/muxfe" />
+    <meta name="keywords" content="BMap,bmap,offline,web,tile,baidu" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/BMap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/DrawingManager_1.4.css"/>
+    <style type="text/css">
+        html {
+            height: 100%;
+        }
+        body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+        #container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body onload="init()">
+    <div id="container"></div>
+
+    <script>
+        window.__BMAP_EXTRA_CONFIG__ = {
+            enable: true,
+            host: '',
+            path: '',
+            tilePath: 'tile1/tile',
+            satellitePath: 'tile1/it',
+            roadPath: 'tile/road'
+        };
+    </script>
+    <script type="text/javascript" src="js/BaiduApi_2.0.js"></script>
+    <script type="text/javascript" src="js/DrawingManager_1.4.js"></script>
+    <script type="text/javascript" src="js/CurveLine_1.5.min.js"></script>
+    <script type="text/javascript">
+        var map;
+        function init() {
+            map = new BMap.Map("container", {
+                mapType: BMAP_HYBRID_MAP,
+                minZoom: 1,
+                maxZoom: 19
+            });
+            var point = new BMap.Point(116.350, 39.9705);
+            map.centerAndZoom(point, 19);
+            map.addControl(new BMap.NavigationControl());
+            map.enableScrollWheelZoom();
+            map.addControl(new BMap.MapTypeControl({
+                mapTypes:[
+                    BMAP_NORMAL_MAP,
+                    BMAP_HYBRID_MAP
+                ],
+                anchor: BMAP_ANCHOR_TOP_RIGHT,
+                offset: new BMap.Size(150, 5)
+            }));
+
+            const styleOptions = {
+                strokeColor: 'blue',
+                fillColor: 'blue',
+                strokeWeight: 3,
+                strokeDasharray: 'none',
+                strokeOpacity: 0.2,
+                fillOpacity: 0.1,
+                strokeStyle: 'solid',
+            }
+            /*new BMapLib.DrawingManager(map, {
+                isOpen: false,
+                enableDrawingTool: true,
+                drawingToolOptions: {
+                    anchor: BMAP_ANCHOR_TOP_RIGHT,
+                    offset: new BMap.Size(5, 5),
+                    drawingModes: [
+                        BMAP_DRAWING_CIRCLE,
+                        BMAP_DRAWING_RECTANGLE,
+                    ],
+                },
+                circleOptions: styleOptions,
+                polygonOptions: styleOptions,
+                rectangleOptions: styleOptions,
+            })*/
+
+            // curve line
+           // var point1 = new BMap.Point(108.922517,34.240008);
+            //var point2 = new BMap.Point(108.926308,34.239232);
+            //var point3 = new BMap.Point(108.923945,34.236822);
+            //var points = [point1, point2, point3];
+           // var curve = new BMapLib.CurveLine(points, {strokeColor: 'blue', strokeWeight: 5, strokeOpacity: 0.5});
+            map.addOverlay(curve);
+            map.addEventListener("mousedown", function(e) {
+                if(e.target._className=='Map' ){
+                //event{type, target, point,pixel}
+                console.log(e.type)
+                console.log(e.target)
+                console.log(e.point)
+                console.log(e.pixel)
+                }
+            });
+        }
+
+
+        function theLocation_obstacle(longitude, latitude) {
+            if (longitude != "" && latitude != "") {
+                // showinfo();
+                bm.clearOverlays();
+                bm.removeOverlay(marker);
+
+                var new_point = new BMap.Point(longitude, latitude);
+                marker.setPosition(new_point);
+                map.centerAndZoom(new_point, 19);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "basic", "G:/zhy_work/02.code/23.MultiLargeScreen/MultiLargeScreen/Log4Qt/examples/basic\basic.vcxproj", "{1E4FF593-131B-3453-9BAF-F7F882AC025B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "propertyconfigurator", "G:/zhy_work/02.code/23.MultiLargeScreen/MultiLargeScreen/Log4Qt/examples/propertyconfigurator\propertyconfigurator.vcxproj", "{1831E3D1-9387-3890-A192-4CBA34F57730}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E4FF593-131B-3453-9BAF-F7F882AC025B}.Debug|x64.ActiveCfg = Debug|x64
+		{1E4FF593-131B-3453-9BAF-F7F882AC025B}.Debug|x64.Build.0 = Debug|x64
+		{1E4FF593-131B-3453-9BAF-F7F882AC025B}.Release|x64.ActiveCfg = Release|x64
+		{1E4FF593-131B-3453-9BAF-F7F882AC025B}.Release|x64.Build.0 = Release|x64
+		{1831E3D1-9387-3890-A192-4CBA34F57730}.Debug|x64.ActiveCfg = Debug|x64
+		{1831E3D1-9387-3890-A192-4CBA34F57730}.Debug|x64.Build.0 = Debug|x64
+		{1831E3D1-9387-3890-A192-4CBA34F57730}.Release|x64.ActiveCfg = Release|x64
+		{1831E3D1-9387-3890-A192-4CBA34F57730}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="git" content="https://github.com/muxfe/bmap-offline-for-web" />
+    <meta name="author" content="https://github.com/muxfe" />
+    <meta name="keywords" content="BMap,bmap,offline,web,tile,baidu" />
+    <title>BaiduMap_Offline</title>
+    <link rel="stylesheet" type="text/css" href="css/BMap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/DrawingManager_1.4.css"/>
+    <style type="text/css">
+        html {
+            height: 100%;
+        }
+        body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+        #container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body onload="init()">
+    <div id="container"></div>
+    <script src="./js/qwebchannel.js"></script>
+    <script>
+        window.__BMAP_EXTRA_CONFIG__ = {
+            enable: true,
+            host: '', // exmaple in nginx container
+            path: '',
+            tilePath: 'tile1/tile',
+            satellitePath: 'tile1/it',
+            roadPath: 'tile1/road'
+        };
+    </script>
+    <script type="text/javascript" src="js/BaiduApi_2.0.js"></script>
+    <!--script type="text/javascript" src="js/baiduapiv1.3.min.js"></script-->
+    <script type="text/javascript" src="js/DrawingManager_1.4.js"></script>
+    <script type="text/javascript" src="js/CurveLine_1.5.min.js"></script>
+    <script type="text/javascript">
+        var map;
+
+        var downPointx = 0.0;
+        var downPointy = 0.0;
+        var qtchannel = new QWebChannel(qt.webChannelTransport, function (channel) {
+            window.showcoord = channel.objects.showcoord;
+            //window.returnpoints = channel.objects.BaiduOfflineMap;
+        });
+
+        //输入lng数组 lat数组 返回 x，y数组
+        function JsCalcPixels(szx1, szy1) {
+            //console.log("getPixelFromGps :" + szx + ":" + szy);
+            //console.log(typeof(szx1));
+            var szx = String(szx1)
+            var szy = String(szy1)
+            //console.log(typeof(szx));
+            ssx = szx.split(",");
+            ssy = szy.split(",");
+            console.log(ssx);
+            console.log(ssy);
+            //console.log("ssx size: " + ssx.length);
+            //console.log("ssy size: " + ssy.length);
+            if (ssx.length != ssy.length) {
+                showcoord.getJsPixels("", "");
+            }
+
+            var resx = '';
+            var resy = '';
+            for (let index = 0; index < ssx.length; index++) {
+                const elemx = ssx[index];
+                const elemy = ssy[index];
+
+                var pt = map.pointToPixel(new BMap.Point(elemx, elemy));
+                if (index < ssx.length - 1) {
+                    resx = resx + pt.x + ',';
+                    resy = resy + pt.y + ',';
+                } else {
+                    resx = resx + pt.x;
+                    resy = resy + pt.y;
+                }
+            }
+            //console.log(Object.values(window.showcoord));
+            window.showcoord.getJsPixels(resx, resy);
+        }
+
+        //单一标签
+        function JsCalcLabelPixel(lblid, lat, lng) {
+            console.log("JsCalcLabelPixel ------");
+            var slblid = String(lblid);
+            var slat = String(lat);
+            var slng = String(lng);
+            var pt = map.pointToPixel(new BMap.Point(lat, lng));
+
+            showcoord.getLabelJsPixel("sdfds", String(pt.x), String(pt.y));
+            //showcoord.getLabelJsPixel(slblid, String(pt.x), String(pt.y));
+        }
+
+        function init() {
+            map = new BMap.Map("container", {
+                mapType: BMAP_HYBRID_MAP,
+                minZoom: 1,
+                maxZoom: 19
+            });
+            var point = new BMap.Point(116.350, 39.9705);
+            map.centerAndZoom(point, 19);
+            map.addControl(new BMap.NavigationControl());
+            map.enableScrollWheelZoom();
+            map.addControl(new BMap.MapTypeControl({
+                mapTypes: [
+                    BMAP_NORMAL_MAP,
+                    BMAP_HYBRID_MAP
+                ],
+                //anchor: BMAP_ANCHOR_BOTTOM_RIGHT
+            }));
+
+            const styleOptions = {
+                strokeColor: 'blue',
+                fillColor: 'blue',
+                strokeWeight: 3,
+                strokeDasharray: 'none',
+                strokeOpacity: 0.2,
+                fillOpacity: 0.1,
+                strokeStyle: 'solid',
+            }
+
+            map.addEventListener("click", function(e) {
+                map.clearOverlays();
+                var new_point = new BMap.Point(e.point.lng, e.point.lat);
+                var marker = new BMap.Point(new_point);
+                map.addOverlay(marker);
+                //marker.setPosition(new_point);
+
+                var pixel = map.pointToPixel(new_point);
+                //console.log(pixel);
+                console.log(pixel.x)
+                console.log(pixel.y)
+                var newlabel = new BMap.Label(e.point.lng + "," + e.point.lat + "[" + pixel.x + "," + pixel.y + "]");
+
+                downPointx = e.point.lng;
+                downPointy = e.point.lat;
+                newlabel.setPosition(new BMap.Point(e.point.lng, e.point.lat));
+                newlabel.setStyle({ color : "red", fontSize : "12px" })
+                //var point = marker.getPosition();
+ 
+                map.addOverlay(newlabel);
+            });
+
+            function pointToPixel(lng, lat) {
+                var pixel = map.pointToPixel(new BMap.Point(lng, lat));
+
+                console.log("pixel x:" + pixel.x + " pixel y:" + pixel.y);
+            }
+
+            map.addEventListener("zoomend", function (e) {
+                console.log("zoomend :")
+                updateInfo("116.512928", "40.0516");
+                //console.log(e.point.lng + ":" + e.point.lat);
+                //pointToPixel(downPointx, downPointy);
+            });
+            map.addEventListener("moveend", function (e) {
+                console.log("moveend :")
+                //console.log(e.point.lng + ":" + e.point.lat);
+                //pointToPixel(downPointx, downPointy);
+            });
+            map.addEventListener("dragend", function (e) {
+                console.log("dragend :")
+                //console.log(e.point.lng + ":" + e.point.lat);
+                //pointToPixel(downPointx, downPointy);
+            });
+            map.addEventListener("mousedown", function (e) {
+                //console.log("mousedown :")
+                //console.log(e.point.lng + ":" + e.point.lat);
+            });
+            map.addEventListener("mouseup", function (e) {
+
+            });
+
+            function updateInfo(lng, lat) {
+                showcoord.getCoordinates(lng, lat);
+            }
+
+            function updateGps(lngs, lats, lnge, late) {
+                //todo
+                console.log("callback:" + lngs + ":" + lats + ":" + lnge + ":" + late);
+            }
+        }
+
+    </script>
+</body>
+</html>
