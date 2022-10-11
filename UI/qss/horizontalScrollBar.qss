@@ -1,0 +1,3 @@
+QScrollBar:horizontal{ height:8px; background:#15808C; margin:0px,0px,0px,0px; padding-left:0px; padding-right:0px;}
+QScrollBar::handle:horizontal{ width:8px; background:#00B3BE; border-radius:4px; min-width:20;}
+QScrollBar::add-page:horizontal,QScrollBar::sub-page:horizontal { background:#15808C; border-radius:4px;}

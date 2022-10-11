@@ -1,0 +1,10 @@
+QTreeWidget{background-color:transparent; border:0px; margin:0px 0px 0px 0px;}
+QTreeWidget::Item{height:40px; border:0px; padding-left:14px; color: #FEFEFE;}
+QTreeWidget::Item:hover{color:rgb(0, 252, 252);}
+QTreeWidget::Item:selected{background-color:transparent; color:rgb(0, 252, 252);}
+QTreeWidget::branch:has-children:!has-siblings:closed,
+QTreeWidget::branch:closed:has-children:has-siblings{border-image: none; image: url(:/UI/icon/moreL.png);}
+QTreeWidget::branch:open:has-children:!has-siblings,
+QTreeWidget::branch:open:has-children:has-siblings{border-image: none; image: url(:/UI/icon/more.png);}
+QTreeWidget::indicator:checked{ image:url(:/UI/icon/checked.png);}
+QTreeWidget::indicator:indeterminate{ image:url(:/UI/icon/partiallyChecked.png);}
